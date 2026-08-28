@@ -1,0 +1,6 @@
+{
+  "name": "M Barber",
+  "description": "Barbearia M Barber em Colombo, Paraná. Corte masculino, barba com toalha quente e agendamento pelo aplicativo Lyndus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
