@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { M_BARBER_CONFIG } from "../config/links";
+import { M_BARBER_IMAGES } from "../config/images";
 import { MapPin, Navigation, Copy, Check, Clock, MessageCircle, ExternalLink } from "lucide-react";
 
 export const LocationSection: React.FC = () => {
@@ -51,12 +52,29 @@ export const LocationSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 2-Column Functional Location & Hours Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* 2-Column Functional Location & Hours Container (Tablet & Desktop md:grid-cols-12) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start">
           
-          {/* Address & Navigation Card (7 spans) */}
-          <div className="lg:col-span-7 p-6 sm:p-8 rounded-lg bg-zinc-900/60 border border-zinc-800 flex flex-col justify-between shadow-lg">
+          {/* Address & Navigation Card (7 spans on md & lg) */}
+          <div className="md:col-span-7 p-6 sm:p-8 rounded-lg bg-zinc-900/60 border border-zinc-800 flex flex-col justify-between shadow-lg">
             <div>
+              {/* Facade Real Photo Header */}
+              <div className="mb-6 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-950 aspect-[16/9] max-h-[320px] relative group">
+                <img
+                  src={M_BARBER_IMAGES.photos.fachada.src}
+                  data-official-file={M_BARBER_IMAGES.photos.fachada.filename}
+                  data-official-src={M_BARBER_IMAGES.photos.fachada.publicPath}
+                  alt={M_BARBER_IMAGES.photos.fachada.alt}
+                  className="w-full h-full object-cover object-[50%_50%] group-hover:scale-102 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 pointer-events-none" />
+                <div className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded bg-black/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 border border-white/10 uppercase">
+                  Reconhecimento do Local • Fachada Oficial
+                </div>
+              </div>
+
               <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 uppercase tracking-wider mb-4">
                 <MapPin className="w-4 h-4 text-zinc-300 shrink-0" />
                 <span>Endereço em Colombo, PR</span>
@@ -77,7 +95,7 @@ export const LocationSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleCopyAddress}
-                  className="min-h-[44px] inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-750 text-white px-4 py-2.5 rounded-md text-xs font-semibold transition-colors cursor-pointer border border-zinc-700 active:scale-95 focus-visible:ring-2 focus-visible:ring-white"
+                  className="min-h-[44px] inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-750 text-white px-4 py-2.5 rounded-md text-xs font-semibold transition-colors cursor-pointer border border-zinc-700 active:scale-95 focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap"
                   aria-live="polite"
                 >
                   {copied ? (
@@ -97,7 +115,7 @@ export const LocationSection: React.FC = () => {
                   href={M_BARBER_CONFIG.links.googleMaps}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="min-h-[44px] inline-flex items-center justify-center gap-2 bg-white text-zinc-950 hover:bg-zinc-200 px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors shadow-sm active:scale-95 focus-visible:ring-2 focus-visible:ring-white"
+                  className="min-h-[44px] inline-flex items-center justify-center gap-2 bg-white text-zinc-950 hover:bg-zinc-200 px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors shadow-sm active:scale-95 focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap"
                 >
                   <Navigation className="w-4 h-4" />
                   <span>Traçar rota no Maps</span>
@@ -114,7 +132,7 @@ export const LocationSection: React.FC = () => {
                 href={M_BARBER_CONFIG.links.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-h-[40px] text-xs font-semibold text-white hover:text-zinc-200 flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-white py-1 px-1 rounded-sm"
+                className="min-h-[40px] text-xs font-semibold text-white hover:text-zinc-200 flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-white py-1 px-1 rounded-sm whitespace-nowrap"
               >
                 <MessageCircle className="w-4 h-4 text-zinc-300" />
                 <span>WhatsApp {M_BARBER_CONFIG.phone.display}</span>
@@ -122,8 +140,8 @@ export const LocationSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Operating Hours Card (5 spans) */}
-          <div className="lg:col-span-5 p-6 sm:p-8 rounded-lg bg-zinc-900/60 border border-zinc-800 shadow-lg">
+          {/* Operating Hours Card (5 spans on md & lg) */}
+          <div className="md:col-span-5 p-6 sm:p-8 rounded-lg bg-zinc-900/60 border border-zinc-800 shadow-lg">
             <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 uppercase tracking-wider mb-6">
               <Clock className="w-4 h-4 text-zinc-300 shrink-0" />
               <span>Horários de atendimento</span>
@@ -154,7 +172,7 @@ export const LocationSection: React.FC = () => {
                 href={M_BARBER_CONFIG.links.lyndus}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-h-[44px] inline-flex items-center justify-center gap-2 text-xs font-bold text-white bg-zinc-800 hover:bg-zinc-700 w-full py-2.5 px-4 rounded-md border border-zinc-700 transition-colors uppercase tracking-wider focus-visible:ring-2 focus-visible:ring-white"
+                className="min-h-[44px] inline-flex items-center justify-center gap-2 text-xs font-bold text-white bg-zinc-800 hover:bg-zinc-700 w-full py-2.5 px-4 rounded-md border border-zinc-700 transition-colors uppercase tracking-wider focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap"
               >
                 <span>Ver horários disponíveis no Lyndus</span>
                 <ExternalLink className="w-3.5 h-3.5" />

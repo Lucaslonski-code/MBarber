@@ -11,6 +11,7 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { ServicesSection } from "./components/ServicesSection";
 import { PrecisionSection } from "./components/PrecisionSection";
+import { SpaceSection } from "./components/SpaceSection";
 import { TeamSection } from "./components/TeamSection";
 import { LocationSection } from "./components/LocationSection";
 import { CTASection } from "./components/CTASection";
@@ -28,6 +29,7 @@ export default function App() {
         <Hero />
         <ServicesSection />
         <PrecisionSection />
+        <SpaceSection />
         <TeamSection />
         <LocationSection />
         <CTASection />

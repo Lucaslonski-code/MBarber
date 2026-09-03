@@ -35,6 +35,7 @@ export const Header: React.FC = () => {
   const navLinks = [
     { label: "Serviços", href: "#servicos" },
     { label: "Precisão", href: "#precisao" },
+    { label: "Espaço", href: "#espaco" },
     { label: "Barbeiros", href: "#barbeiros" },
     { label: "Localização", href: "#localizacao" },
   ];
@@ -61,10 +62,10 @@ export const Header: React.FC = () => {
             <BrandLogo size="sm" />
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation (1024px+) */}
           <nav
             id="desktop-nav"
-            className="hidden md:flex items-center gap-7 lg:gap-9"
+            className="hidden lg:flex items-center gap-6 xl:gap-8"
             aria-label="Navegação Principal"
           >
             {navLinks.map((link) => (
@@ -78,13 +79,13 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Right Action Area - Desktop & Tablet */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          {/* Right Action Area - Desktop (1024px+) */}
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href={M_BARBER_CONFIG.links.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[40px] min-w-[40px] flex items-center justify-center p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/80 rounded-md transition-colors border border-transparent hover:border-zinc-750 focus-visible:ring-2 focus-visible:ring-white"
+              className="min-h-[42px] min-w-[42px] flex items-center justify-center p-2.5 text-zinc-400 hover:text-white hover:bg-zinc-800/80 rounded-md transition-colors border border-transparent hover:border-zinc-750 focus-visible:ring-2 focus-visible:ring-white"
               aria-label="Instagram Oficial M Barber"
               title="Instagram Oficial"
             >
@@ -95,7 +96,7 @@ export const Header: React.FC = () => {
               href={M_BARBER_CONFIG.links.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[40px] min-w-[40px] flex items-center justify-center p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/80 rounded-md transition-colors border border-transparent hover:border-zinc-750 focus-visible:ring-2 focus-visible:ring-white"
+              className="min-h-[42px] min-w-[42px] flex items-center justify-center p-2.5 text-zinc-400 hover:text-white hover:bg-zinc-800/80 rounded-md transition-colors border border-transparent hover:border-zinc-750 focus-visible:ring-2 focus-visible:ring-white"
               aria-label="Falar no WhatsApp"
               title="Falar no WhatsApp"
             >
@@ -108,30 +109,31 @@ export const Header: React.FC = () => {
               href={M_BARBER_CONFIG.links.lyndus}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[40px] inline-flex items-center gap-2 bg-white text-zinc-950 hover:bg-zinc-200 px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-md transition-all duration-150 active:scale-95 shadow-sm focus-visible:ring-2 focus-visible:ring-white"
+              className="min-h-[42px] inline-flex items-center gap-2 bg-white text-zinc-950 hover:bg-zinc-200 px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-md transition-all duration-150 active:scale-95 shadow-sm focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap"
             >
               <span>Agendar no Lyndus</span>
               <ExternalLink className="w-3.5 h-3.5 opacity-80" />
             </a>
           </div>
 
-          {/* Mobile Right Controls */}
-          <div className="flex sm:hidden items-center gap-2">
+          {/* Tablet & Mobile Right Controls (< 1024px) */}
+          <div className="flex lg:hidden items-center gap-2 sm:gap-3">
             <a
               href={M_BARBER_CONFIG.links.lyndus}
               target="_blank"
               rel="noopener noreferrer"
-              className="min-h-[38px] bg-white text-zinc-950 px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-md flex items-center gap-1.5 active:scale-95 shadow-sm"
+              className="min-h-[42px] bg-white text-zinc-950 px-3.5 sm:px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-md flex items-center gap-1.5 active:scale-95 shadow-sm whitespace-nowrap focus-visible:ring-2 focus-visible:ring-white"
             >
-              <span>Lyndus</span>
-              <ExternalLink className="w-3 h-3" />
+              <span className="hidden xs:inline sm:inline">Agendar no Lyndus</span>
+              <span className="inline xs:hidden sm:hidden">Lyndus</span>
+              <ExternalLink className="w-3.5 h-3.5" />
             </a>
             
             <button
               id="mobile-menu-toggle"
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="min-h-[38px] min-w-[38px] p-2 text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 rounded-md flex items-center justify-center focus-visible:ring-2 focus-visible:ring-white"
+              className="min-h-[42px] min-w-[42px] p-2.5 text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 rounded-md flex items-center justify-center focus-visible:ring-2 focus-visible:ring-white transition-colors"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
             >
@@ -145,7 +147,7 @@ export const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div
           id="mobile-menu-overlay"
-          className="sm:hidden fixed inset-0 top-[56px] bg-black/80 backdrop-blur-md z-50 flex flex-col justify-between p-5 overflow-y-auto"
+          className="lg:hidden fixed inset-0 top-[56px] sm:top-[64px] bg-black/80 backdrop-blur-md z-50 flex flex-col justify-between p-5 overflow-y-auto"
         >
           <div className="bg-[#0c0c0f] border border-zinc-800 rounded-lg p-5 shadow-2xl">
             <span className="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block mb-3">

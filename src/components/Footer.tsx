@@ -45,6 +45,11 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="#espaco" className="min-h-[36px] inline-flex items-center text-zinc-300 hover:text-white transition-colors py-1 focus-visible:ring-2 focus-visible:ring-white rounded-sm">
+                  Espaço & Estrutura
+                </a>
+              </li>
+              <li>
                 <a href="#barbeiros" className="min-h-[36px] inline-flex items-center text-zinc-300 hover:text-white transition-colors py-1 focus-visible:ring-2 focus-visible:ring-white rounded-sm">
                   Maycon & Alysson
                 </a>

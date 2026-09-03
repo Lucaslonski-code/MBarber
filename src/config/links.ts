@@ -1,16 +1,12 @@
 /**
- * Configuração centralizada para redirecionamentos e canais externos da M Barber.
- * AMBIENTE DE TESTES / DESENVOLVIMENTO:
- * Todos os destinos, canais e integrações externas utilizam o identificador de teste @mbarbertests.
+ * Configuração centralizada para dados, canais e integrações da M Barber.
  */
 
-export const TEST_IDENTIFIER = "@mbarbertests";
-
-export const TEST_DESTINATIONS = {
-  LYNDUS: "@mbarbertests",
-  WHATSAPP: "@mbarbertests",
-  INSTAGRAM: "@mbarbertests",
-  MAPS: "@mbarbertests",
+export const OFFICIAL_DATA = {
+  WHATSAPP_PHONE: "41 9799-1206",
+  WHATSAPP_RAW: "554197991206",
+  WHATSAPP_LINK: "https://wa.me/554197991206",
+  LYNDUS_URL: "https://qrco.de/bdHylb",
 } as const;
 
 export interface BusinessConfig {
@@ -67,22 +63,22 @@ export const M_BARBER_CONFIG: BusinessConfig = {
     zip: "83400-000",
   },
   phone: {
-    display: TEST_IDENTIFIER,
-    raw: TEST_IDENTIFIER,
+    display: OFFICIAL_DATA.WHATSAPP_PHONE,
+    raw: OFFICIAL_DATA.WHATSAPP_RAW,
   },
-  phoneDisplay: TEST_IDENTIFIER,
-  phoneRaw: TEST_IDENTIFIER,
-  whatsappMessage: TEST_IDENTIFIER,
+  phoneDisplay: OFFICIAL_DATA.WHATSAPP_PHONE,
+  phoneRaw: OFFICIAL_DATA.WHATSAPP_RAW,
+  whatsappMessage: "",
   social: {
-    instagramHandle: TEST_IDENTIFIER,
+    instagramHandle: "@mbarbertests",
   },
   links: {
-    lyndus: TEST_DESTINATIONS.LYNDUS,
-    lyndusMaycon: TEST_DESTINATIONS.LYNDUS,
-    lyndusAlysson: TEST_DESTINATIONS.LYNDUS,
-    whatsapp: TEST_DESTINATIONS.WHATSAPP,
-    instagram: TEST_DESTINATIONS.INSTAGRAM,
-    googleMaps: TEST_DESTINATIONS.MAPS,
+    lyndus: OFFICIAL_DATA.LYNDUS_URL,
+    lyndusMaycon: OFFICIAL_DATA.LYNDUS_URL,
+    lyndusAlysson: OFFICIAL_DATA.LYNDUS_URL,
+    whatsapp: OFFICIAL_DATA.WHATSAPP_LINK,
+    instagram: "@mbarbertests",
+    googleMaps: "@mbarbertests",
   },
   schedule: [
     { days: "Terça a Sexta-feira", hours: "09:00 às 20:00" },
