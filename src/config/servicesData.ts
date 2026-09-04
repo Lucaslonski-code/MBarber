@@ -42,7 +42,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     description:
       "Atendimento integrado com corte completo, acabamento refinado e barba feita com toalha aquecida e navalha.",
     duration: "60 min",
-    price: "R$ 60,00",
+    price: "R$ 70,00",
     highlight: true,
     includedSteps: [
       "Corte de cabelo completo e alinhado",
@@ -67,70 +67,6 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Toalha aquecida para amaciar os fios",
       "Alinhamento com navalha descartável",
       "Bálsamo pós-barba e hidratação",
-    ],
-    lyndusUrl: M_BARBER_CONFIG.links.lyndus,
-  },
-  {
-    id: "pezinho",
-    name: "Pézinho",
-    category: "cabelo",
-    tagline: "Manutenção e alinhamento da nuca e costeletas",
-    description:
-      "Acerto pontual das linhas da nuca e costeletas com máquina e navalha descartável para manter o corte em dia.",
-    duration: "20 min",
-    price: "R$ 25,00",
-    includedSteps: [
-      "Alinhamento com navalha descartável",
-      "Acabamento na máquina de precisão",
-      "Loção pós-barba refrescante",
-    ],
-    lyndusUrl: M_BARBER_CONFIG.links.lyndus,
-  },
-  {
-    id: "contorno",
-    name: "Contorno",
-    category: "cabelo",
-    tagline: "Definição milimétrica das linhas e acabamento",
-    description:
-      "Desenho e alinhamento detalhado das linhas frontais, laterais e contornos do corte com lâmina nova e descartável.",
-    duration: "20 min",
-    price: "R$ 25,00",
-    includedSteps: [
-      "Definição milimétrica das linhas",
-      "Navalha com lâmina descartável individual",
-      "Finalização com loção calmante",
-    ],
-    lyndusUrl: M_BARBER_CONFIG.links.lyndus,
-  },
-  {
-    id: "sobrancelha",
-    name: "Sobrancelha",
-    category: "cuidados",
-    tagline: "Limpeza natural dos excessos",
-    description:
-      "Alinhamento e limpeza dos fios na pinça ou navalha, preservando o desenho natural sem afinar excessivamente.",
-    duration: "15 min",
-    price: "R$ 20,00",
-    includedSteps: [
-      "Remoção dos excessos",
-      "Alinhamento dos fios",
-      "Acabamento natural e discreto",
-    ],
-    lyndusUrl: M_BARBER_CONFIG.links.lyndus,
-  },
-  {
-    id: "camuflagem-grisalhos",
-    name: "Camuflagem de Grisalhos",
-    category: "cuidados",
-    tagline: "Tonalização suave para disfarçar os brancos",
-    description:
-      "Aplicação de tonalizante para disfarçar os fios brancos do cabelo ou da barba, com resultado uniforme e natural.",
-    duration: "30 min",
-    price: "R$ 35,00",
-    includedSteps: [
-      "Escolha do tom adequado",
-      "Aplicação no lavatório",
-      "Lavagem e hidratação",
     ],
     lyndusUrl: M_BARBER_CONFIG.links.lyndus,
   },

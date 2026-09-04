@@ -82,8 +82,8 @@ export const M_BARBER_CONFIG: BusinessConfig = {
     googleMaps: "https://www.google.com/maps/search/?api=1&query=M+Barber+Colombo+PR",
   },
   schedule: [
-    { days: "Terça a Sexta-feira", hours: "09:00 às 20:00" },
-    { days: "Sábado", hours: "10:00 às 18:00" },
+    { days: "Terça a Sexta-feira", hours: "10:00 às 20:00" },
+    { days: "Sábado", hours: "08:00 às 18:00" },
     { days: "Domingo e Segunda-feira", hours: "Fechado" },
   ],
 };
