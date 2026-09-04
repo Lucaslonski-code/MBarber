@@ -1,12 +1,13 @@
-/**
- * Configuração centralizada para dados, canais e integrações da M Barber.
- */
+
+/* Configuração centralizada para dados, canais e integrações da M Barber. */
 
 export const OFFICIAL_DATA = {
   WHATSAPP_PHONE: "41 9799-1206",
   WHATSAPP_RAW: "554197991206",
   WHATSAPP_LINK: "https://wa.me/554197991206",
   LYNDUS_URL: "https://qrco.de/bdHylb",
+  INSTAGRAM_URL: "https://www.instagram.com/m.barber.1?igsi=MXI4djkwYjQ0N2EzbA==",
+  INSTAGRAM_HANDLE: "@m.barber.1",
 } as const;
 
 export interface BusinessConfig {
@@ -70,15 +71,15 @@ export const M_BARBER_CONFIG: BusinessConfig = {
   phoneRaw: OFFICIAL_DATA.WHATSAPP_RAW,
   whatsappMessage: "",
   social: {
-    instagramHandle: "@mbarbertests",
+    instagramHandle: OFFICIAL_DATA.INSTAGRAM_HANDLE,
   },
   links: {
     lyndus: OFFICIAL_DATA.LYNDUS_URL,
     lyndusMaycon: OFFICIAL_DATA.LYNDUS_URL,
     lyndusAlysson: OFFICIAL_DATA.LYNDUS_URL,
     whatsapp: OFFICIAL_DATA.WHATSAPP_LINK,
-    instagram: "@mbarbertests",
-    googleMaps: "@mbarbertests",
+    instagram: OFFICIAL_DATA.INSTAGRAM_URL,
+    googleMaps: "https://www.google.com/maps/search/?api=1&query=M+Barber+Colombo+PR",
   },
   schedule: [
     { days: "Terça a Sexta-feira", hours: "09:00 às 20:00" },
@@ -86,3 +87,4 @@ export const M_BARBER_CONFIG: BusinessConfig = {
     { days: "Domingo e Segunda-feira", hours: "Fechado" },
   ],
 };
+
