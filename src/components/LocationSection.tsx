@@ -18,11 +18,11 @@ export const LocationSection: React.FC = () => {
 
   const scheduleDays = [
     { day: "Segunda-feira", hours: "Fechado" },
-    { day: "Terça-feira", hours: "09:00 – 20:00" },
-    { day: "Quarta-feira", hours: "09:00 – 20:00" },
-    { day: "Quinta-feira", hours: "09:00 – 20:00" },
-    { day: "Sexta-feira", hours: "09:00 – 20:00" },
-    { day: "Sábado", hours: "10:00 – 18:00" },
+    { day: "Terça-feira", hours: "10:00 – 20:00" },
+    { day: "Quarta-feira", hours: "10:00 – 20:00" },
+    { day: "Quinta-feira", hours: "10:00 – 20:00" },
+    { day: "Sexta-feira", hours: "10:00 – 20:00" },
+    { day: "Sábado", hours: "08:00 – 18:00" },
     { day: "Domingo", hours: "Fechado" },
   ];
 
